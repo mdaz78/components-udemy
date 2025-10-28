@@ -1,12 +1,18 @@
+import { GoBell, GoDatabase } from 'react-icons/go';
 import Button from './Button';
 const App = () => {
   return (
     <div>
       <div>
-        <Button>Test 1</Button>
+        <Button>
+          <GoBell /> Test 1
+        </Button>
       </div>
       <div>
-        <Button primary>Test 1</Button>
+        <Button primary>
+          <GoDatabase />
+          Test 1
+        </Button>
       </div>
       <div>
         <Button primary rounded outline>
