@@ -3,6 +3,22 @@ const App = () => {
   return (
     <div>
       <div>
+        <Button>Test 1</Button>
+      </div>
+      <div>
+        <Button primary>Test 1</Button>
+      </div>
+      <div>
+        <Button primary rounded outline>
+          Test 1
+        </Button>
+      </div>
+      <div>
+        <Button secondary rounded outline>
+          Test 1
+        </Button>
+      </div>
+      <div>
         <Button success rounded outline>
           Test 1
         </Button>
