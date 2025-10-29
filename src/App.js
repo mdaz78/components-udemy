@@ -4,12 +4,12 @@ const App = () => {
   return (
     <div>
       <div>
-        <Button>
+        <Button className='mb-5'>
           <GoBell /> Test 1
         </Button>
       </div>
       <div>
-        <Button primary>
+        <Button primary className='mb-10'>
           <GoDatabase />
           Test 1
         </Button>
