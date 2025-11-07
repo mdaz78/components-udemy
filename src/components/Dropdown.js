@@ -1,9 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { GoChevronDown } from 'react-icons/go';
 import Panel from './Panel';
 
 function DropDown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const ref = useRef();
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (!ref?.current) return;
+
+      if (!ref.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handler, true);
+
+    return () => {
+      document.removeEventListener('click', handler, true);
+    };
+  }, []);
 
   const handleClick = () => {
     setIsOpen((current) => !current);
@@ -30,7 +48,7 @@ function DropDown({ options, value, onChange }) {
   });
 
   return (
-    <div className='w-48 relative'>
+    <div className='w-48 relative' ref={ref}>
       <Panel
         onClick={handleClick}
         className='cursor-pointer flex items-center justify-between'
