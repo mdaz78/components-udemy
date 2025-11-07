@@ -1,10 +1,11 @@
-import AccordionPage from './pages/AccordionPage';
+import DropDownPage from './pages/DropDownPage';
 
 const App = () => {
   return (
     <div>
       {/* <ButtonPage /> */}
-      <AccordionPage />
+      {/* <AccordionPage /> */}
+      <DropDownPage />
     </div>
   );
 };
